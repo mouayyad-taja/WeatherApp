@@ -16,6 +16,19 @@
 		3450647327AEA9AE004721DA /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450647227AEA9AE004721DA /* WeatherAppTests.swift */; };
 		3450647D27AEA9AE004721DA /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450647C27AEA9AE004721DA /* WeatherAppUITests.swift */; };
 		3450647F27AEA9AE004721DA /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450647E27AEA9AE004721DA /* WeatherAppUITestsLaunchTests.swift */; };
+		3450649227AEB06D004721DA /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450649127AEB06D004721DA /* GenericDataSource.swift */; };
+		3450649927AEB0DA004721DA /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3450649627AEB0DA004721DA /* placeHolder.png */; };
+		3450649B27AEB16F004721DA /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450649A27AEB16F004721DA /* DynamicValue.swift */; };
+		3450649E27AEB1B0004721DA /* APIServie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450649D27AEB1AF004721DA /* APIServie.swift */; };
+		345064A027AEB1DF004721DA /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450649F27AEB1DF004721DA /* BaseVC.swift */; };
+		345064B327AEB228004721DA /* SDStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064A427AEB228004721DA /* SDStateView.swift */; };
+		345064B427AEB228004721DA /* UILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064A627AEB228004721DA /* UILayout.swift */; };
+		345064B527AEB228004721DA /* UIViewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064A727AEB228004721DA /* UIViewAutolayout.swift */; };
+		345064B627AEB228004721DA /* SDStateViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064A827AEB228004721DA /* SDStateViewExt.swift */; };
+		345064B827AEB228004721DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064AB27AEB228004721DA /* Constants.swift */; };
+		345064B927AEB228004721DA /* JSONEncoderDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064AC27AEB228004721DA /* JSONEncoderDecoder.swift */; };
+		345064BA27AEB228004721DA /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064AE27AEB228004721DA /* ControllerManager.swift */; };
+		345064BE27AEB228004721DA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064B227AEB228004721DA /* Theme.swift */; };
 		63D5D0D314D34C541EA30AFF /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7BE76FBF7324ED6A5A007F /* Pods_WeatherAppTests.framework */; };
 		89B741044808F0CA0795C74D /* Pods_WeatherApp_WeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3F63C358FAADBF4F777582 /* Pods_WeatherApp_WeatherAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +64,19 @@
 		3450647827AEA9AE004721DA /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3450647C27AEA9AE004721DA /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		3450647E27AEA9AE004721DA /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3450649127AEB06D004721DA /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		3450649627AEB0DA004721DA /* placeHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolder.png; sourceTree = "<group>"; };
+		3450649A27AEB16F004721DA /* DynamicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		3450649D27AEB1AF004721DA /* APIServie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServie.swift; sourceTree = "<group>"; };
+		3450649F27AEB1DF004721DA /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		345064A427AEB228004721DA /* SDStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStateView.swift; sourceTree = "<group>"; };
+		345064A627AEB228004721DA /* UILayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayout.swift; sourceTree = "<group>"; };
+		345064A727AEB228004721DA /* UIViewAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutolayout.swift; sourceTree = "<group>"; };
+		345064A827AEB228004721DA /* SDStateViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStateViewExt.swift; sourceTree = "<group>"; };
+		345064AB27AEB228004721DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		345064AC27AEB228004721DA /* JSONEncoderDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncoderDecoder.swift; sourceTree = "<group>"; };
+		345064AE27AEB228004721DA /* ControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
+		345064B227AEB228004721DA /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4F380CF3727FB82B8C99424A /* Pods-WeatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		53725FE2721742006219A94D /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		733871385F44E78D5AE7E29D /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,11 +153,8 @@
 		3450645A27AEA9A9004721DA /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				3450645B27AEA9A9004721DA /* AppDelegate.swift */,
-				3450645D27AEA9A9004721DA /* SceneDelegate.swift */,
-				3450646127AEA9A9004721DA /* Main.storyboard */,
-				3450646427AEA9AD004721DA /* Assets.xcassets */,
-				3450646627AEA9AD004721DA /* LaunchScreen.storyboard */,
+				3450649327AEB0B5004721DA /* Resources */,
+				3450648C27AEB01C004721DA /* Classes */,
 				3450646927AEA9AD004721DA /* Info.plist */,
 			);
 			path = WeatherApp;
@@ -152,6 +175,150 @@
 				3450647E27AEA9AE004721DA /* WeatherAppUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		3450648B27AEB00B004721DA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3450645B27AEA9A9004721DA /* AppDelegate.swift */,
+				3450645D27AEA9A9004721DA /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3450648C27AEB01C004721DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3450648B27AEB00B004721DA /* Common */,
+				345064A127AEB228004721DA /* Lib */,
+				345064AA27AEB228004721DA /* Utils */,
+				3450648D27AEB025004721DA /* Models */,
+				3450649C27AEB1AF004721DA /* Services */,
+				3450649027AEB04C004721DA /* DataSources */,
+				3450648F27AEB034004721DA /* ViewControllers */,
+				3450648E27AEB02C004721DA /* ViewModels */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3450648D27AEB025004721DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3450649A27AEB16F004721DA /* DynamicValue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3450648E27AEB02C004721DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3450648F27AEB034004721DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3450649F27AEB1DF004721DA /* BaseVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3450649027AEB04C004721DA /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				3450649127AEB06D004721DA /* GenericDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		3450649327AEB0B5004721DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3450649427AEB0DA004721DA /* Images */,
+				3450649727AEB0DA004721DA /* Screens */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3450649427AEB0DA004721DA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3450646427AEA9AD004721DA /* Assets.xcassets */,
+				3450649627AEB0DA004721DA /* placeHolder.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3450649727AEB0DA004721DA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3450646127AEA9A9004721DA /* Main.storyboard */,
+				3450646627AEA9AD004721DA /* LaunchScreen.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3450649C27AEB1AF004721DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3450649D27AEB1AF004721DA /* APIServie.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		345064A127AEB228004721DA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				345064A227AEB228004721DA /* SDStateView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		345064A227AEB228004721DA /* SDStateView */ = {
+			isa = PBXGroup;
+			children = (
+				345064A327AEB228004721DA /* Classes */,
+				345064A827AEB228004721DA /* SDStateViewExt.swift */,
+			);
+			path = SDStateView;
+			sourceTree = "<group>";
+		};
+		345064A327AEB228004721DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				345064A427AEB228004721DA /* SDStateView.swift */,
+				345064A527AEB228004721DA /* UIView+Autolayout */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		345064A527AEB228004721DA /* UIView+Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				345064A627AEB228004721DA /* UILayout.swift */,
+				345064A727AEB228004721DA /* UIViewAutolayout.swift */,
+			);
+			path = "UIView+Autolayout";
+			sourceTree = "<group>";
+		};
+		345064AA27AEB228004721DA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				345064AB27AEB228004721DA /* Constants.swift */,
+				345064AC27AEB228004721DA /* JSONEncoderDecoder.swift */,
+				345064AD27AEB228004721DA /* Managers */,
+				345064B227AEB228004721DA /* Theme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		345064AD27AEB228004721DA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				345064AE27AEB228004721DA /* ControllerManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		48CD8E8100FD63E07E3D3DE4 /* Frameworks */ = {
@@ -274,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3450646827AEA9AD004721DA /* LaunchScreen.storyboard in Resources */,
+				3450649927AEB0DA004721DA /* placeHolder.png in Resources */,
 				3450646527AEA9AD004721DA /* Assets.xcassets in Resources */,
 				3450646327AEA9A9004721DA /* Main.storyboard in Resources */,
 			);
@@ -404,7 +572,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3450645C27AEA9A9004721DA /* AppDelegate.swift in Sources */,
+				345064A027AEB1DF004721DA /* BaseVC.swift in Sources */,
 				3450645E27AEA9A9004721DA /* SceneDelegate.swift in Sources */,
+				3450649227AEB06D004721DA /* GenericDataSource.swift in Sources */,
+				345064B927AEB228004721DA /* JSONEncoderDecoder.swift in Sources */,
+				3450649E27AEB1B0004721DA /* APIServie.swift in Sources */,
+				345064BE27AEB228004721DA /* Theme.swift in Sources */,
+				345064BA27AEB228004721DA /* ControllerManager.swift in Sources */,
+				345064B527AEB228004721DA /* UIViewAutolayout.swift in Sources */,
+				345064B427AEB228004721DA /* UILayout.swift in Sources */,
+				345064B327AEB228004721DA /* SDStateView.swift in Sources */,
+				3450649B27AEB16F004721DA /* DynamicValue.swift in Sources */,
+				345064B627AEB228004721DA /* SDStateViewExt.swift in Sources */,
+				345064B827AEB228004721DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
