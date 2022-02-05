@@ -14,6 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        print(Environment.shared.serverUrl)
+        
+        #if DEVELOPMENT
+            print("Current environment is: Development")
+        #elseif STAGING
+            print("Current environment is: STAGING")
+        #elseif PRODUCTION
+            print("Current environment is: PRODUCTION")
+        #endif
         return true
     }
 
