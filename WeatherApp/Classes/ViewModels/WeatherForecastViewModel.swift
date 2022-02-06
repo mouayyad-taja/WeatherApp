@@ -12,7 +12,7 @@ class WeatherForecastViewModel {
     //Api reference
     private var apiService : WeatherRepository?
     
-    //stories dataSource
+    //Weather dataSource
     private(set) weak var dataSource : GenericDataSource<WeatherForecast>?
     
     //Observable data

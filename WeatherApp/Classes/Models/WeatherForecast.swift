@@ -91,6 +91,22 @@ struct WeatherForecast: Codable {
         }
         return datetime ?? ""
     }
+    
+    func getWeatherInfo()->[WeatherInfo]{
+        return [
+            WeatherInfo(title: "Wind speed", icon: "wind", value: UnitManager.shared.formatValueUnit(self.windSpd, unit: .WindSpeed)),
+            WeatherInfo(title: "Wind direction", icon: "wind", value: self.windCdirFull),
+            WeatherInfo(title: "Sunrise", icon: "sunrise", value: self.sunriseTime),
+            WeatherInfo(title: "Sunset", icon: "sunset", value: self.sunsetTime),
+            WeatherInfo(title: "Visibility", icon: "eye.fill", value: UnitManager.shared.formatValueUnit(self.vis, unit: .Visibility)),
+            WeatherInfo(title: "Average pressure", icon: "stopwatch.fill", value: UnitManager.shared.formatValueUnit(self.pres, unit: .Pressure)),
+            WeatherInfo(title: "Average relative humidity", icon: "humidity", value: UnitManager.shared.formatValueUnit(Double(self.rh ?? 0), unit: .Percent)),
+            WeatherInfo(title: "Max Feels Like", icon: "thermometer", value: UnitManager.shared.formatValueUnit(self.appMaxTemp, unit: .Celcius)),
+            WeatherInfo(title: "Min Feels Like", icon: "thermometer", value: UnitManager.shared.formatValueUnit(self.appMinTemp, unit: .Celcius)),
+            WeatherInfo(title: "Accumulated liquid equivalent precipitation", icon: "aqi.medium", value: UnitManager.shared.formatValueUnit(self.precip, unit: .Precipitation)),
+        ]
+
+    }
 }
 
 // MARK: WeatherForecast convenience initializers and mutators

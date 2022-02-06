@@ -9,7 +9,7 @@ import Foundation
 
 class WeatherDetailsViewModel {
         
-    //stories dataSource
+    //Weather info dataSource
     private(set) weak var dataSource : GenericDataSource<WeatherInfo>?
     
     //Observable data
@@ -37,19 +37,7 @@ class WeatherDetailsViewModel {
 
         let weatherMainInfo = WeatherMainInfo(dateTime: weatherDayForecast.datetime, cityName: weatherCollection.cityName, temp: weatherDayForecast.temp, lowTemp: weatherDayForecast.lowTemp, highTemp: weatherDayForecast.highTemp, weather: weatherDayForecast.weather)
         
-        var listInfo :[WeatherInfo] = [
-            WeatherInfo(title: "Wind speed", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.windSpd, unit: .WindSpeed)),
-            WeatherInfo(title: "Wind direction", icon: "wind", value: weatherDayForecast.windCdirFull),
-            WeatherInfo(title: "Sunrise", icon: "wind", value: weatherDayForecast.sunriseTime),
-            WeatherInfo(title: "Sunset", icon: "wind", value: weatherDayForecast.sunsetTime),
-            WeatherInfo(title: "Visibility", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.vis, unit: .Visibility)),
-            WeatherInfo(title: "Average pressure", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.pres, unit: .Pressure)),
-            WeatherInfo(title: "Average relative humidity", icon: "wind", value: UnitManager.shared.formatValueUnit(Double(weatherDayForecast.rh ?? 0), unit: .Percent)),
-            WeatherInfo(title: "Max Feels Like", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.appMaxTemp, unit: .Celcius)),
-            WeatherInfo(title: "Min Feels Like", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.appMinTemp, unit: .Celcius)),
-            WeatherInfo(title: "Accumulated liquid equivalent precipitation", icon: "wind", value: UnitManager.shared.formatValueUnit(weatherDayForecast.precip, unit: .Precipitation)),
-
-        ]
+        let listInfo :[WeatherInfo] = weatherDayForecast.getWeatherInfo()
         self.data.value = (weatherMainInfo, listInfo)
         self.dataSource?.data.value = listInfo
     }
