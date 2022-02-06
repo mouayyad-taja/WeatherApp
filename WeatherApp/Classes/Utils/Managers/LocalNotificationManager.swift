@@ -65,6 +65,8 @@ class LocalNotificationManager{
         guard let date = weather.date else {return}
         
         var dateComponents = Calendar.current.dateComponents([.day, .year, .month], from: date)
+        let day = dateComponents.day
+        let month = dateComponents.month
 
         let dayHour = 8
         let nightHour = 20
@@ -73,7 +75,8 @@ class LocalNotificationManager{
 
         let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
 
-        let request = UNNotificationRequest(identifier: "weatherNotification",
+        let identifier = "weatherNotification-\(day!)-\(month!)\(night ? "N" : "M")"
+        let request = UNNotificationRequest(identifier: identifier,
                                             content: notificationContent,
                                             trigger: notificationTrigger)
         userNotificationCenter.add(request) { (error) in
