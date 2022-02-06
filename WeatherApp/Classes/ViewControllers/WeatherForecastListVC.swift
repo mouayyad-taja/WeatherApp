@@ -36,6 +36,7 @@ class WeatherForecastListVC: BaseVC {
         super.viewDidLoad()
         
         prepareViewModel()
+        setupUI()
     }
     
     //MARK: Setup UI
@@ -107,9 +108,15 @@ class WeatherForecastListVC: BaseVC {
         self.navigationItem.rightBarButtonItems = [settingBtn]
     }
     
+    func setupUI(){
+        self.view.backgroundColor = UIColor.Colors.primaryBackGroundColor
+        self.tableView?.backgroundColor = .clear
+    }
+    
     // MARK: - Methods
-    func openWeatherForecastDetails(forWeather weather: WeatherForecast) {
-        //TODO
+    func openWeatherForecastDetails(forWeather weatherForecast: WeatherForecast) {
+        guard let weatherCollection = self.viewModel.data.value else {return}
+        self.pushWeatherDetailVC(weatherCollection: weatherCollection, weatherDayForecast: weatherForecast)
     }
     
     @objc func openSettingPage(){

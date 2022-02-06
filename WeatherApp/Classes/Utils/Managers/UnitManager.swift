@@ -10,6 +10,11 @@ import Foundation
 public enum UnitKey: String {
     case Fahrenheit = "I"
     case Celcius = "M"
+    case WindSpeed = "m/s"
+    case Visibility = "KM"
+    case Pressure = "mb"
+    case Percent = "%"
+    case Precipitation = "mm"
     
     var title: String{
         switch self {
@@ -17,6 +22,8 @@ public enum UnitKey: String {
             return "F"
         case .Celcius:
             return "C"
+        default:
+            return self.rawValue
         }
     }
 }
@@ -69,4 +76,7 @@ class UnitManager{
         return "\(currentTemp) °\(currentUnit.title)"
     }
     
+    func formatValueUnit(_ value: Double?, unit: UnitKey)->String{
+        return "\(value ?? 0) \(unit.title)"
+    }
 }

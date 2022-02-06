@@ -50,5 +50,4 @@ class WeatherForecastDayTVC: UITableViewCell {
         self.tempDescLbl?.textColor = .Colors.secondryTextColor
         self.tempDescLbl?.font = UIFont.systemFont(ofSize: 12)
     }
-    
 }

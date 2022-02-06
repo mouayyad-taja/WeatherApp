@@ -58,6 +58,7 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="aXn-jE-93d" secondAttribute="trailing" constant="16" id="3OE-q5-hWg"/>
                     <constraint firstAttribute="bottom" secondItem="aXn-jE-93d" secondAttribute="bottom" constant="16" id="78j-pi-COc"/>
@@ -66,6 +67,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateLbl" destination="gXy-7B-IJt" id="dsR-vg-3B3"/>
                 <outlet property="tempDescLbl" destination="p8E-0f-sTF" id="FQz-w2-kje"/>

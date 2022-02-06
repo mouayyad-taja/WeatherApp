@@ -28,6 +28,9 @@ struct ControllerManager {
     //collection of main controllers
     struct main {
         
+        static var weatherDetailsVC : WeatherDetailsVC {
+            return viewController(withClass: WeatherDetailsVC.self, storyboard: myStoryboard.main)
+        }
     }
 }
 

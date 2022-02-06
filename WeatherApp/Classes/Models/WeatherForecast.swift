@@ -73,6 +73,24 @@ struct WeatherForecast: Codable {
         }
         return datetime ?? ""
     }()
+    
+    var sunriseTime: String {
+        if let value = sunriseTs {
+            let sunriseTs = Double(value)
+            let date = Date(timeIntervalSince1970: sunriseTs)
+            return date.toString(format: .custom("HH:mm a"))
+        }
+        return datetime ?? ""
+    }
+    
+    var sunsetTime: String {
+        if let value = sunsetTs {
+            let sunsetTs = Double(value)
+            let date = Date(timeIntervalSince1970: sunsetTs)
+            return date.toString(format: .custom("HH:mm a"))
+        }
+        return datetime ?? ""
+    }
 }
 
 // MARK: WeatherForecast convenience initializers and mutators

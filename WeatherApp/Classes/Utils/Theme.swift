@@ -11,14 +11,11 @@ import UIKit
 extension UIColor {
     struct Colors{
         // Color constants
-        static let primaryTextColor = UIColor.black
-        static let secondryTextColor = UIColor.darkGray
-        static let thirdTextColor = UIColor.lightGray
-        static let primaryBackGroundColor = UIColor(hexString: "F5F5F5") ?? .lightGray
+        static let primaryTextColor = UIColor(named: "TextColor") ?? UIColor.black
+        static let secondryTextColor = UIColor(named: "SecondTextColor") ?? UIColor.darkGray
+        static let secondBackGroundColor = UIColor(named: "AccentColor") ?? .lightGray
+        static let primaryBackGroundColor = UIColor(named: "SecondColor") ?? .lightGray
+        static let thirdBackGroundColor = UIColor(named: "ThirdColor") ?? .lightGray
 
-        static let primaryButtonColor = UIColor.black
-        static let primaryButtonTextColor = UIColor.white
-        static let disableButtonColor = UIColor.darkGray
-        static let disableButtonTextColor = UIColor.white
     }
 }

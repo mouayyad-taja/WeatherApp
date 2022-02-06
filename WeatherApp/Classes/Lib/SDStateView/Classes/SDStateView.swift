@@ -27,25 +27,25 @@ public class SDStateView: UIView {
     }
     
     @IBInspectable
-    public var spinnerColor: UIColor = UIColor.lightGray {
+    public var spinnerColor: UIColor = UIColor.white {
         didSet {
             setUp()
         }
     }
     @IBInspectable
-    public var stateViewTitleColor: UIColor = UIColor.darkGray {
+    public var stateViewTitleColor: UIColor = UIColor.white {
         didSet {
             setUp()
         }
     }
     @IBInspectable
-    public var stateViewSubtitleColor: UIColor = UIColor.lightGray {
+    public var stateViewSubtitleColor: UIColor = UIColor.white {
         didSet {
             setUp()
         }
     }
     @IBInspectable
-    public var buttonColor: UIColor = UIColor.darkGray {
+    public var buttonColor: UIColor = UIColor.white {
         didSet {
             setUp()
         }
