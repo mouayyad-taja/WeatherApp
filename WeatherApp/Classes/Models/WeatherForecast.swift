@@ -37,6 +37,13 @@ struct WeatherForecast: Codable {
         case datetime, temp
     }
     
+    var date: Date? {
+        if let dateStr = datetime {
+            return Date.init(fromString: dateStr, format: .isoDate)
+        }
+        return nil
+    }
+    
     lazy var dayDate: String = {
         if let dateStr = datetime {
             if let date = Date.init(fromString: dateStr, format: .isoDate){

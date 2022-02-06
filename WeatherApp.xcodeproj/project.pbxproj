@@ -97,6 +97,9 @@
 		3481A5F827B00923004F98B0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345064B227AEB228004721DA /* Theme.swift */; };
 		3481A5F927B00923004F98B0 /* UnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF60C727AF8DCB00EB1DDD /* UnitManager.swift */; };
 		3481A5FA27B00923004F98B0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481A59E27AFA4E8004F98B0 /* LocationManager.swift */; };
+		3481A5FC27B01169004F98B0 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481A5FB27B01169004F98B0 /* LocalNotificationManager.swift */; };
+		3481A5FD27B01169004F98B0 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481A5FB27B01169004F98B0 /* LocalNotificationManager.swift */; };
+		3481A5FE27B01169004F98B0 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3481A5FB27B01169004F98B0 /* LocalNotificationManager.swift */; };
 		34BF604D27AEB8B500EB1DDD /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF604C27AEB8B500EB1DDD /* WeatherForecast.swift */; };
 		34BF605427AEBAF700EB1DDD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF605327AEBAF700EB1DDD /* Environment.swift */; };
 		34BF606827AEBF2200EB1DDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450645B27AEA9A9004721DA /* AppDelegate.swift */; };
@@ -242,6 +245,7 @@
 		3481A5C127AFFCC3004F98B0 /* StorableWeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorableWeatherForecast.swift; sourceTree = "<group>"; };
 		3481A5C327AFFD4F004F98B0 /* WeatherLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocalRepository.swift; sourceTree = "<group>"; };
 		3481A5C527B008CE004F98B0 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		3481A5FB27B01169004F98B0 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		34BF604C27AEB8B500EB1DDD /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		34BF605027AEB96000EB1DDD /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		34BF605127AEB99C00EB1DDD /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -624,6 +628,7 @@
 				34BF60C727AF8DCB00EB1DDD /* UnitManager.swift */,
 				3481A59E27AFA4E8004F98B0 /* LocationManager.swift */,
 				3481A5BF27AFFA06004F98B0 /* WeatherManager.swift */,
+				3481A5FB27B01169004F98B0 /* LocalNotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481A5C627B008CE004F98B0 /* WeatherRepository.swift in Sources */,
+				3481A5FC27B01169004F98B0 /* LocalNotificationManager.swift in Sources */,
 				34BF60C327AF899B00EB1DDD /* WeatherForecastDayTVC.swift in Sources */,
 				3450645C27AEA9A9004721DA /* AppDelegate.swift in Sources */,
 				34BF60C627AF8C6A00EB1DDD /* WeatherForecastCollection.swift in Sources */,
@@ -1130,6 +1136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481A5C827B008CF004F98B0 /* WeatherRepository.swift in Sources */,
+				3481A5FE27B01169004F98B0 /* LocalNotificationManager.swift in Sources */,
 				3481A5E627B00908004F98B0 /* WeatherDetailsMainInfoCVC.swift in Sources */,
 				34BF606827AEBF2200EB1DDD /* AppDelegate.swift in Sources */,
 				34BF606927AEBF2200EB1DDD /* Environment.swift in Sources */,
@@ -1179,6 +1186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3481A5C727B008CE004F98B0 /* WeatherRepository.swift in Sources */,
+				3481A5FD27B01169004F98B0 /* LocalNotificationManager.swift in Sources */,
 				3481A5E127B00907004F98B0 /* WeatherDetailsMainInfoCVC.swift in Sources */,
 				3481A5F727B00923004F98B0 /* WeatherManager.swift in Sources */,
 				34BF608C27AEC2DD00EB1DDD /* AppDelegate.swift in Sources */,
@@ -1401,6 +1409,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
@@ -1432,6 +1441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
@@ -1621,6 +1631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
@@ -1757,6 +1768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
@@ -1898,6 +1910,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
@@ -2034,6 +2047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQR6GMA39Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WeatherApp/Resources/Plists/WeatherApp Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Weather App Dev";
