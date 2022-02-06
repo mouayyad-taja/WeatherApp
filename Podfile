@@ -20,6 +20,15 @@ end
 
 target 'WeatherApp' do
   default_pods
+  
+  target 'WeatherAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WeatherAppUITests' do
+    # Pods for testing
+  end
 end
 
 target 'WeatherApp Staging' do
@@ -30,11 +39,12 @@ target 'WeatherApp Production' do
   default_pods
 end
 
-target 'WeatherAppTests' do
-  inherit! :search_paths
-  # Pods for testing
-end
-
-target 'WeatherAppUITests' do
-  # Pods for testing
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            if config.name == 'Test'
+                config.build_settings['ENABLE_TESTABILITY'] = 'YES'
+            end
+        end
+    end
 end
