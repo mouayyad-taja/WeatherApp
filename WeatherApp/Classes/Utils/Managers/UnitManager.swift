@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum UnitKey: String {
+public enum UnitKey: String, Codable {
     case Fahrenheit = "I"
     case Celcius = "M"
     case WindSpeed = "m/s"
@@ -26,13 +26,15 @@ public enum UnitKey: String {
             return self.rawValue
         }
     }
+    
+    static let tempUnits :[UnitKey] = [.Celcius, .Fahrenheit]
 }
 
 class UnitManager{
     
     public let generalUnit :UnitKey = .Celcius
     
-    private var currentUnit :UnitKey!
+    public private(set) var currentUnit :UnitKey!
     
     static var shared: UnitManager {
         return UnitManager()
@@ -43,8 +45,18 @@ class UnitManager{
             self.currentUnit = UnitKey(rawValue: currentUnit)
         }else {
             self.currentUnit = .Celcius
+            UserDefaultsManager.shared.saveObject(self.currentUnit.rawValue, key: .tempUnit)
         }
-        
+    }
+    
+    func updateUnit(unit: UnitKey){
+        UserDefaultsManager.shared.saveObject(unit.rawValue, key: .tempUnit)
+        currentUnit = unit
+        broadcastUnit(unit: currentUnit)
+    }
+    
+    private func broadcastUnit(unit: UnitKey){
+        NotificationCenter.default.post(name: .didUpdateUnit, object: unit)
     }
     
     
@@ -73,10 +85,17 @@ class UnitManager{
         }else {
             currentTemp = calculateCelsius(fahrenheit: temp)
         }
-        return "\(currentTemp) °\(currentUnit.title)"
+        
+        return "\(String(format: "%.2f", currentTemp)) °\(currentUnit.title)"
     }
     
     func formatValueUnit(_ value: Double?, unit: UnitKey)->String{
         return "\(value ?? 0) \(unit.title)"
     }
+}
+
+
+//Define a new types of Notification
+extension Notification.Name {
+    static let didUpdateUnit = Notification.Name("didUpdateUnit")
 }

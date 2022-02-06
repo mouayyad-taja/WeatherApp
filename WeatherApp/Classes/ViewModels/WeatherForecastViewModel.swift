@@ -25,8 +25,13 @@ class WeatherForecastViewModel {
     init(dataSource : GenericDataSource<WeatherForecast>?, apiService: WeatherRepository? = WeatherRemoteRepository()) {
         self.dataSource = dataSource
         self.apiService = apiService
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onUpdateUnit(_:)), name: .didUpdateUnit, object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     //Get list weather forecasst
     func getWeatherForecastList(){
         self.apiService?.fetchWeatherForecast{
@@ -47,6 +52,14 @@ class WeatherForecastViewModel {
         self.dataSource?.data.value = items
         
         self.data.value = weatherCollection
+    }
+    
+    //Hanlde updated unit
+    @objc func onUpdateUnit(_ notification:Notification){
+        if let product = notification.object as? UnitKey {
+            self.dataSource?.data.forceNotify()
+            self.data.forceNotify()
+        }
     }
 }
 

@@ -31,6 +31,10 @@ struct ControllerManager {
         static var weatherDetailsVC : WeatherDetailsVC {
             return viewController(withClass: WeatherDetailsVC.self, storyboard: myStoryboard.main)
         }
+        
+        static var settingsVC : SettingsVC {
+            return viewController(withClass: SettingsVC.self, storyboard: myStoryboard.main)
+        }
     }
 }
 

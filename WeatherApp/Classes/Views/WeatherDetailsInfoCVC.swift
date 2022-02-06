@@ -9,7 +9,6 @@ import UIKit
 
 class WeatherDetailsInfoCVC: UICollectionViewCell {
 
-    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var valueLbl: UILabel!
     @IBOutlet weak var iconImgView: UIImageView!

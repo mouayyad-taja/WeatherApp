@@ -28,8 +28,8 @@ class WeatherDetailsViewModel {
         self.weatherCollection = weatherCollection
         self.getWeatherDetailsList()
     }
-    
-    //Get list weather forecasst
+
+    //Get weather details
     func getWeatherDetailsList(){
         guard let weatherDayForecast = weatherDayForecast, let weatherCollection = weatherCollection else {
             return
@@ -41,6 +41,7 @@ class WeatherDetailsViewModel {
         self.data.value = (weatherMainInfo, listInfo)
         self.dataSource?.data.value = listInfo
     }
+    
 }
 
 

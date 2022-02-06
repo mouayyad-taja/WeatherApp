@@ -120,7 +120,7 @@ class WeatherForecastListVC: BaseVC {
     }
     
     @objc func openSettingPage(){
-        //TODDO
+        self.presentSettingsVC()
     }
     
     // MARK: - GetData
