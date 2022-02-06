@@ -28,6 +28,9 @@ class WeatherForecastViewModel {
         
         NotificationCenter.default.addObserver(self, selector: #selector(onUpdateUnit(_:)), name: .didUpdateUnit, object: nil)
         
+        LocationManager.shared.requestLocation({
+            self.getWeatherForecastList()
+        })
     }
     
     deinit {

@@ -14,6 +14,8 @@ def default_pods
   pod 'ReachabilitySwift'
   pod 'RealmSwift'
   pod 'AFDateHelper'
+  pod 'SwiftLocation/Core'
+
 end
 
 target 'WeatherApp' do

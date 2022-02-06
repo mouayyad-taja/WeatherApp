@@ -35,6 +35,7 @@ PODS:
   - SwifterSwift/StoreKit (5.2.0)
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
+  - SwiftLocation/Core (5.1.0)
 
 DEPENDENCIES:
   - AFDateHelper
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - RealmSwift
   - SDWebImage (~> 4.0)
   - SwifterSwift
+  - SwiftLocation/Core
 
 SPEC REPOS:
   trunk:
@@ -53,6 +55,7 @@ SPEC REPOS:
     - RealmSwift
     - SDWebImage
     - SwifterSwift
+    - SwiftLocation
 
 SPEC CHECKSUMS:
   AFDateHelper: b769c07d3d4784ee9a74633285304261bb27dc52
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  SwiftLocation: 83e0ea75a1969cee3a1197e2b7095603fc23fde5
 
-PODFILE CHECKSUM: 09accd81436e0ddfe6d058be74c05eeeb975175d
+PODFILE CHECKSUM: 719247f4aeda48a51c5e57beb7463d16a1dd67c5
 
 COCOAPODS: 1.11.2
