@@ -4,6 +4,10 @@
 <dict>
 	<key>APP_HOST</key>
 	<string>$(APP_HOST)</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>MouayyadTaja.WeatherApp.refresh</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -23,9 +27,13 @@
 			</array>
 		</dict>
 	</dict>
-	<key>WEATHER_BASE_URL</key>
-	<string>$(WEATHER_BASE_URL)</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 	<key>WEATHER_API_KEY</key>
 	<string>$(WEATHER_API_KEY)</string>
+	<key>WEATHER_BASE_URL</key>
+	<string>$(WEATHER_BASE_URL)</string>
 </dict>
 </plist>

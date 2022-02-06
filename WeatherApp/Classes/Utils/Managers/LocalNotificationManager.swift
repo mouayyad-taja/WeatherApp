@@ -24,7 +24,7 @@ class LocalNotificationManager{
     func scheduleNotifications(weatherList: [WeatherForecast]){
         requestNotificationAuthorization()
         cancelAllNotifications()
-        
+
         for i in 0..<weatherList.count{
             let weather = weatherList[i]
             if i > 2 {
@@ -108,6 +108,4 @@ class LocalNotificationManager{
         }
         
     }
-    
-
 }
