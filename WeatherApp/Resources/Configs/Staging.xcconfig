@@ -1,0 +1,15 @@
+//
+//  Staging.xcconfig
+//  WeatherApp
+//
+//  Created by Mouayyad Taja on 05/02/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+APP_NAME_PREFIX = staging_
+
+WEATHER_BASE_URL = api.weatherbit.io
+APP_HOST = https
+
+WEATHER_API_KEY = e9d258e0555142618aabc4f395b62dce

@@ -15,6 +15,8 @@ final class APIServie {
     //validate response status
     func handleResponse<T>(response: AFDataResponse<T>,  _ completion: (ResultHandler<T>?)){
         
+        self.printResponse(url: response.request?.url, data: response.data)
+
         let statusCode = response.response?.statusCode
         
         //response is failed
@@ -32,6 +34,52 @@ final class APIServie {
             completion?(Result.success(data))
         }
     }
+    
+    public func printRequest(headers: HTTPHeaders, parameters: [String: Any]) {
+        #if DEVELOPMENT
+            print("===============[Headers]==================")
+            do {
+                if JSONSerialization.isValidJSONObject(headers){
+                    let data = try JSONSerialization.data(withJSONObject: headers,                                                       options: .prettyPrinted)
+                    let prettyString = String(data: data, encoding: .utf8)
+                    print(prettyString ?? "")
+                }
+            } catch (let error) {
+                print(error.localizedDescription)
+            }
+            print("===============[Parameters]===============")
+            do {
+                if JSONSerialization.isValidJSONObject(parameters){
+                    let data = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+                    let prettyString = String(data: data, encoding: .utf8)
+                    print(prettyString ?? "")
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+            print("==========================================")
+        #endif
+    }
+    
+    public func printResponse(url: URL?, data: Data?) {
+        #if DEVELOPMENT
+            print("===============[Response]=================")
+            print("From Url: \(url?.absoluteString ?? "")")
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    if let payload = json as? [String: Any], !payload.isEmpty {
+                        print(payload)
+                    }
+                } catch {
+                    let str = String(data: data, encoding: .utf8)
+                    print(str ?? "")
+                }
+            }
+            print("==========================================")
+        #endif
+    }
+
 }
 
 

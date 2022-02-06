@@ -13,9 +13,10 @@ def default_pods
   pod 'SDWebImage', '~> 4.0'
   pod 'ReachabilitySwift'
   pod 'RealmSwift'
+  pod 'AFDateHelper'
 end
 
-target 'WeatherApp Development' do
+target 'WeatherApp' do
   default_pods
 end
 
