@@ -10,7 +10,7 @@ import Foundation
 class WeatherForecastViewModel {
     
     //Api reference
-    private var apiService : WeatherRepository?
+    private var apiService : WeatherRepositoryProtocol?
     
     //Weather dataSource
     private(set) weak var dataSource : GenericDataSource<WeatherForecast>?
@@ -22,7 +22,7 @@ class WeatherForecastViewModel {
     private(set) var error : DynamicValue<Error?> = DynamicValue<Error?>(nil)
     
     //MARK: Initialization
-    init(dataSource : GenericDataSource<WeatherForecast>?, apiService: WeatherRepository? = WeatherRemoteRepository()) {
+    init(dataSource : GenericDataSource<WeatherForecast>?, apiService: WeatherRepositoryProtocol? = WeatherRepository()) {
         self.dataSource = dataSource
         self.apiService = apiService
         
@@ -56,7 +56,7 @@ class WeatherForecastViewModel {
     
     //Hanlde updated unit
     @objc func onUpdateUnit(_ notification:Notification){
-        if let product = notification.object as? UnitKey {
+        if (notification.object as? UnitKey) != nil, self.data.value != nil {
             self.dataSource?.data.forceNotify()
             self.data.forceNotify()
         }

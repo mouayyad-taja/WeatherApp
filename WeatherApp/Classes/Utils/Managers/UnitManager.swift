@@ -36,9 +36,7 @@ class UnitManager{
     
     public private(set) var currentUnit :UnitKey!
     
-    static var shared: UnitManager {
-        return UnitManager()
-    }
+    static var shared: UnitManager = UnitManager()
 
     fileprivate init(){
         if let currentUnit = UserDefaultsManager.shared.loadObject(forKey: .tempUnit) as? String{

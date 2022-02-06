@@ -9,6 +9,9 @@ import Foundation
 
 public enum UserDefaultsKey: String {
     case tempUnit
+    case cityName
+    case lat
+    case long
 }
 
 public struct UserDefaultsManager {

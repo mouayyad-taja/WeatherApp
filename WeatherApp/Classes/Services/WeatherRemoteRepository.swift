@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import Reachability
 
-final class WeatherRemoteRepository : WeatherRepository {
+final class WeatherRemoteRepository : WeatherRepositoryProtocol {
         
     let baseService = APIServie()
     

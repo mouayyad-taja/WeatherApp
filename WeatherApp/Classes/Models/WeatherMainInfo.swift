@@ -13,5 +13,5 @@ struct WeatherMainInfo{
     var temp: Double?
     var lowTemp: Double?
     var highTemp: Double?
-    var weather: Weather?
+    var weather: WeatherDetails?
 }
